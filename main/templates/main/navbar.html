@@ -1,0 +1,119 @@
+<nav class="navbar navbar-expand-lg">
+  <div>
+    <a class="navbar-brand" href="/">Auth MVC</a>
+  </div>
+
+  <div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="text-white">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+
+        {% if user.is_authenticated %}
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hi {{user}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'logout'%}">Logout</a>
+        </li>
+
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'login'%}"> Login </a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- <nav
+  class="navbar navbar-expand-lg"
+  style="background-color: #000; color: #fff"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="/">Neighbourhood</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="text-white">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a
+            class="nav-link active text-white"
+            aria-current="page"
+            href="{%url 'main:home' %}"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle mr-4"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            {{user}}
+          </a>
+          <div class="dropdown-menu p-2" aria-labelledby="navbarDropdown">
+            <a href="{% url 'main:profile' %}" style="color: inherit"
+              >Profile</a
+            >
+            <div class="dropdown-divider"></div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{%url 'logout' %}"> Logout </a>
+        </li>
+      </ul>
+      {%else%}
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link active text-white"
+            href="{%url 'login' %}"
+            aria-current="page"
+            >Login</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{%url 'signup' %}"> Register </a>
+        </li>
+        {%endif%}
+      </ul>
+    </div>
+  </div>
+</nav> -->
