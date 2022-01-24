@@ -11,12 +11,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
-# class SignupView(generic.CreateView):
-#     template_name = 'registration/signup.html'
-#     form_class = CustomUserCreationForm
-
-#     def get_success_url(self):
-#         return reverse("login")
     
 def SignupView(request):
     date = dt.date.today()
@@ -28,9 +22,6 @@ def SignupView(request):
             password = form.cleaned_data.get('password1')
             firstname=form.cleaned_data['firstname']
             lastname=form.cleaned_data['lastname']
-            name=username
-            email=form.cleaned_data['email']
-            # send_welcome_email(name,email,date)
             user = authenticate(username=username, password=password)
             login(request, user)
             return redirect('login')
