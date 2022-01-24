@@ -12,6 +12,6 @@ from .views import HomePageView
 app_name="authentication"
 
 urlpatterns = [
-     path('',HomePageView,name='home'),
+     path('/home',HomePageView,name='home'),
 ]
 
