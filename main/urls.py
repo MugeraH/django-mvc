@@ -6,12 +6,13 @@ from django.conf.urls.static import static
 
 
 from . import views
-from .views import HomePageView
+from .views import HomePageView,LandingPageView
 
 
 app_name="authentication"
 
 urlpatterns = [
-     path('home',HomePageView,name='home'),
+    path('',LandingPageView,name='landing'),
+    path('home',HomePageView,name='home'),
 ]
 
