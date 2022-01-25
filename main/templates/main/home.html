@@ -11,7 +11,14 @@
     <h1 class="h1 text-white">
       Welcome <span style="text-transform: capitalize"> {{user}}</span>
     </h1>
-    <p class="h4 text-white">You have super admin access</p>
+
+    {% if user.is_superuser %}
+    <p class="h4 text-white">You have Super admin access</p>
+    {%elif user.is_admin %}
+    <p class="h4 text-white">You have admin access</p>
+    {%else%}
+    <p class="h4 text-white">You have user access</p>
+    {% endif %}
   </section>
 </div>
 ​ {% endblock %}
