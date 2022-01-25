@@ -6,5 +6,27 @@
 
 <!-- content -->
 {%block content%} ​
-<div class="container-fluid dashboard ml-3 mr-5">landing page</div>
+<main class="container" style="height: 87.5vh; width: 100vw; padding: 10px">
+  <section
+    class="text-center mt-5"
+    style="
+      color: white;
+
+      min-width: 400px;
+      margin: 20px auto;
+    "
+  >
+    <h2 class="h1 mb-3">Auth MVC</h2>
+    <p class="h5 mt-5 mb-4">
+      A simple application demonstarting one of the ways django handles
+      authentication and access control for users
+    </p>
+
+    <button class="btn btn-primary mt-5">
+      <a href="{%url 'login'%}" style="text-decoration: none; color: white"
+        >Get Started</a
+      >
+    </button>
+  </section>
+</main>
 ​ {% endblock %}

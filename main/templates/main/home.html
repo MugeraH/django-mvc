@@ -6,12 +6,12 @@
 
 <!-- content -->
 {%block content%} ​
-<div class="container-fluid dashboard ml-3 mr-5">
-  <div class="intro">
-    <header>
-      <h2>Welcome <span style="text-transform: capitalize"> {{user}}</span></h2>
-      <h3>{{date}}</h3>
-    </header>
-  </div>
+<div class="container" style="height: 87.5vh; width: 100vw; padding: 10px">
+  <section class="text-center mt-5" style="max-width: 500px; margin: 20px auto">
+    <h1 class="h1 text-white">
+      Welcome <span style="text-transform: capitalize"> {{user}}</span>
+    </h1>
+    <p class="h4 text-white">You have super admin access</p>
+  </section>
 </div>
 ​ {% endblock %}
