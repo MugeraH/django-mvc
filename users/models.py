@@ -7,12 +7,13 @@ class User(AbstractUser):
     firstname   = models.CharField(max_length=255, unique=True)
     lastname   = models.CharField(max_length=255, unique=True)
     is_admin   = models.BooleanField(default=False) 
+
     
     USERNAME_FIELD = 'username' 
     REQUIRED_FIELDS = []
     
     
     class Meta:
-        ordering = ["pk"]
+        ordering = ["-pk"]
 
     
