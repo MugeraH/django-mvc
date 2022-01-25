@@ -1,0 +1,23 @@
+{%extends 'main/base.html'%}
+<!-- bootstrap -->
+{% load bootstrap4%}
+<!-- static -->
+{% load static %}
+
+<!-- content -->
+{%block content%} ​
+<main class="container" style="height: 87.5vh; width: 100vw; padding: 10px">
+  <section
+    class="text-center mt-5"
+    style="color: white; min-width: 400px; margin: 20px auto"
+  >
+    <h2 class="h1 mb-3">Admin Page</h2>
+    <p class="h5 mt-5 mb-4">
+      This is the admin's page only  an admin should view this
+      page
+    </p>
+
+     <a href="/home" class="btn btn-success">Back</a>
+  </section>
+</main>
+​ {% endblock %}

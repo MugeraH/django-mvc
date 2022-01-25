@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 
 
 from . import views
-from .views import HomePageView,LandingPageView
+from .views import HomePageView,LandingPageView,SuperUserPageView,AdminPageView,UserPageView
 
 
 app_name="authentication"
@@ -14,6 +14,9 @@ app_name="authentication"
 urlpatterns = [
     path('',LandingPageView,name='landing'),
     path('home',HomePageView,name='home'),
+    path('superuser',SuperUserPageView,name='superuser_page'),
+    path('admin_page',AdminPageView,name='admin_page'),
+    path('user',UserPageView,name='user_page'),
 ]
 
 

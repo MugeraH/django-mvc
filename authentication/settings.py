@@ -41,11 +41,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-   
+    'django.contrib.sites',
     'users',
     'main',
 
     'bootstrap4', 
+    
+     #allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+     
+     #providers
+     'allauth.socialaccount.providers.facebook',
+     'allauth.socialaccount.providers.google',
+     
+     
 ]
 
 MIDDLEWARE = [
@@ -149,7 +160,7 @@ TIME_ZONE = 'Africa/Nairobi'
 USE_I18N = True
 
 USE_TZ = True
-
+SITE_ID=1 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)

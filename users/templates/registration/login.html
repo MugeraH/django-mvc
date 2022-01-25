@@ -1,3 +1,4 @@
+
 {% load bootstrap4 %} {% load static%}
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Auth MVC</title>
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" />
+   
 
     {% block styles %} {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
@@ -24,10 +25,6 @@
         <button class="btn btn-success" type="submit">Login</button>
       </form>
 
-      <div class="d-flex justify-content-around mt-5">
-        <button class="btn btn-success">Login with Goggle</button>
-        <button class="btn btn-primary">Login with Facebook</button>
-      </div>
 
       <div class="reg m-3 mt-5 text-center">
         <span class="mt-5 text-white"

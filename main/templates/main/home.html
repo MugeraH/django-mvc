@@ -13,11 +13,35 @@
     </h1>
 
     {% if user.is_superuser %}
-    <p class="h4 text-white">You have Super admin access</p>
+    <p class="h4 text-white mt-5 mb-5">You have Super admin access</p>
+
+    <a
+      class="btn btn-primary text-white"
+      href="{%url 'authentication:superuser_page'%}"
+    >
+      Access Super User Page</a
+    >
+
     {%elif user.is_admin %}
-    <p class="h4 text-white">You have admin access</p>
+    <p class="h4 text-white mt-5 mb-5">You have admin access</p>
+
+    <a
+      class="btn btn-primary text-white"
+      href="{%url 'authentication:admin_page'%}"
+    >
+      Access Admin Page</a
+    >
+
     {%else%}
-    <p class="h4 text-white">You have user access</p>
+    <p class="h4 text-white mt-5 mb-5">You have user access</p>
+
+    <a
+      class="btn btn-primary text-white"
+      href="{%url 'authentication:user_page'%}"
+    >
+      Access User Page</a
+    >
+
     {% endif %}
   </section>
 </div>
